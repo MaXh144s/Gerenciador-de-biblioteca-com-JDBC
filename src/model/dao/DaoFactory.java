@@ -5,11 +5,11 @@ import src.model.dao.impl.BookDaoJDBC;
 
 public class DaoFactory {
 
-    public BookDao createBookDao(){
+    public static BookDao createBookDao(){
         return new BookDaoJDBC(DB.getConnection());
     }
 
-    public BookDao createAuthorDao(){
+    public static BookDao createAuthorDao(){
         return new BookDaoJDBC(DB.getConnection());
     }
 
