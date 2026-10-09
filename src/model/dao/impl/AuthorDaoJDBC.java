@@ -1,11 +1,18 @@
 package src.model.dao.impl;
 
+import java.sql.Connection;
 import java.util.List;
 
 import src.model.dao.AuthorDao;
 import src.model.entities.Author;
 
 public class AuthorDaoJDBC implements AuthorDao{
+
+    private Connection conn;
+
+    public AuthorDaoJDBC(Connection conn){
+        this.conn = conn;
+    }
 
     @Override
     public void deleteById(int id) {

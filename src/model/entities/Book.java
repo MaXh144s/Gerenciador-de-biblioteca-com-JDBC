@@ -3,7 +3,7 @@ package src.model.entities;
 public class Book {
     
     private Integer id;
-    private String name;
+    private String title;
     private Integer PublishedYear;
     private Double price;
 
@@ -11,9 +11,9 @@ public class Book {
 
     public Book(){}
 
-    public Book(Integer id, String name, Integer publishedYear, Double price, Author author) {
+    public Book(Integer id, String title, Integer publishedYear, Double price, Author author) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         PublishedYear = publishedYear;
         this.price = price;
         this.author = author;
@@ -27,12 +27,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Integer getPublishedYear() {
@@ -61,7 +61,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [id=" + id + ", name=" + name + ", PublishedYear=" + PublishedYear + ", price=" + price
+        return "Book [id=" + id + ", title=" + title + ", PublishedYear=" + PublishedYear + ", price=" + price
                 + ", author=" + author + "]";
     }
 
@@ -69,7 +69,7 @@ public class Book {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
         return result;
     }
 
@@ -82,10 +82,10 @@ public class Book {
         if (getClass() != obj.getClass())
             return false;
         Book other = (Book) obj;
-        if (name == null) {
-            if (other.name != null)
+        if (title == null) {
+            if (other.title != null)
                 return false;
-        } else if (!name.equals(other.name))
+        } else if (!title.equals(other.title))
             return false;
         return true;
     }
